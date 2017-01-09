@@ -40,6 +40,7 @@ struct Options {
   // Optional http proxy if required.
   // e.g. "socks5://127.0.0.1:1080"
   const char *curl_proxy;
+  const char *http_dns_server;
 
 };
 typedef struct Options options_t;

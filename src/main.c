@@ -179,7 +179,7 @@ int main(int argc, char *argv[]) {
   ev_signal_start(loop, &sigint);
 
   dns_poller_t dns_poller;
-  dns_poller_init(&dns_poller, loop, opt.bootstrap_dns, "dns.google.com",
+  dns_poller_init(&dns_poller, loop, opt.bootstrap_dns, opt.http_dns_server,
                   120 /* seconds */, dns_poll_cb, &app.resolv);
 
   ev_run(loop, 0);
